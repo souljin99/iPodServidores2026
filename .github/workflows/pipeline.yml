@@ -21,4 +21,4 @@ jobs:
         run: docker build -t image-ipod2 .
 
       - name: Step 4 - Mostrar fecha
-        run: echo "The current date and time is: $(date)"
+        run: 'echo "The current date and time is: $(date)"'
