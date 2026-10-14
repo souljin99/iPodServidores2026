@@ -11,8 +11,14 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - name: Step 1 - docker build
+      - name: Step 1 - Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Step 2 - Comprobar archivos
+        run: ls -la
+
+      - name: Step 3 - Construir imagen Docker
         run: docker build -t image-ipod2 .
 
-      - name: Step 2 - Echo Current Date
-        run: 'echo "The current date and time is: $(date)"'
+      - name: Step 4 - Mostrar fecha
+        run: echo "The current date and time is: $(date)"
